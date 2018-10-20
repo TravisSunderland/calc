@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CalcViewController" customModule="Studyflow" customModuleProvider="target">
+            <connections>
+                <outlet property="baseStackView1" destination="gg8-Z4-vxx" id="AmD-VB-raj"/>
+                <outlet property="baseStackView2" destination="MbW-e1-pAC" id="wnE-lp-9bR"/>
+                <outlet property="baseStackView3" destination="IuZ-m1-MJw" id="Snl-gE-pM6"/>
+                <outlet property="baseStackView4" destination="E1k-6a-0M3" id="W3M-ih-eUd"/>
+                <outlet property="baseStackView5" destination="7ho-iH-SmJ" id="ycC-IF-PKp"/>
+                <outlet property="displayLabel" destination="aqN-aA-1SV" id="jzx-Ne-mog"/>
+                <outlet property="displayLabelHeightConstraint" destination="8xQ-N3-PRp" id="Oub-AM-wm3"/>
+                <outlet property="expressionLabelContainer" destination="m0Z-vf-Kbl" id="SfU-1b-fta"/>
+                <outlet property="extraStackView1" destination="RbX-ZR-cE4" id="nyr-Li-Qzb"/>
+                <outlet property="extraStackView2" destination="dPc-TB-oRK" id="SSw-SB-R9E"/>
+                <outlet property="extraStackView3" destination="jlK-u0-VS7" id="iL6-b0-lO5"/>
+                <outlet property="extraStackView4" destination="hqE-bi-xed" id="na3-kz-UW9"/>
+                <outlet property="extraStackView5" destination="Jo3-PQ-n3G" id="Z0A-hC-4QV"/>
+                <outlet property="memoryLabel" destination="7HF-Y0-mls" id="6W7-Xv-vVd"/>
+                <outlet property="radLabel" destination="ZqU-sf-k5L" id="MRl-GH-mL6"/>
+                <outlet property="stackView" destination="DVs-ak-ry0" id="2CG-Ev-sfU"/>
+                <outlet property="stackView1" destination="fUI-Bd-6CS" id="xGJ-UE-Wmy"/>
+                <outlet property="stackView2" destination="7mj-fD-6Db" id="JyM-jI-gqc"/>
+                <outlet property="stackView3" destination="zgC-cq-tcE" id="VCH-59-aHZ"/>
+                <outlet property="stackView4" destination="Fv3-ah-Klx" id="hth-JI-HB1"/>
+                <outlet property="stackView5" destination="2nU-RV-tu6" id="m5G-EB-eg9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="stackViewsWithButtons" destination="RbX-ZR-cE4" collectionClass="NSMutableArray" id="Xa3-ZU-8lt"/>
+                <outletCollection property="stackViewsWithButtons" destination="gg8-Z4-vxx" collectionClass="NSMutableArray" id="nVp-8P-9OV"/>
+                <outletCollection property="stackViewsWithButtons" destination="dPc-TB-oRK" collectionClass="NSMutableArray" id="Yop-EN-KOi"/>
+                <outletCollection property="stackViewsWithButtons" destination="MbW-e1-pAC" collectionClass="NSMutableArray" id="fQT-nv-VVc"/>
+                <outletCollection property="stackViewsWithButtons" destination="jlK-u0-VS7" collectionClass="NSMutableArray" id="fYN-Ej-dTf"/>
+                <outletCollection property="stackViewsWithButtons" destination="IuZ-m1-MJw" collectionClass="NSMutableArray" id="Jh7-xA-RtP"/>
+                <outletCollection property="stackViewsWithButtons" destination="hqE-bi-xed" collectionClass="NSMutableArray" id="OGg-L1-6Jq"/>
+                <outletCollection property="stackViewsWithButtons" destination="E1k-6a-0M3" collectionClass="NSMutableArray" id="FTU-jt-PtE"/>
+                <outletCollection property="stackViewsWithButtons" destination="Jo3-PQ-n3G" collectionClass="NSMutableArray" id="oUm-Cm-Qay"/>
+                <outletCollection property="stackViewsWithButtons" destination="7ho-iH-SmJ" collectionClass="NSMutableArray" id="0N0-qv-rKs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HG8-nB-qzi">
+                    <rect key="frame" x="0.0" y="55" width="375" height="612"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="pw0-OP-jN0" userLabel="Result Label View">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                            <subviews>
+                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="aqN-aA-1SV" customClass="CopyableLabel" customModule="Studyflow" customModuleProvider="target">
+                                    <rect key="frame" x="333" y="5" width="37" height="72"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-sf-k5L" customClass="CustomLabel" customModule="Studyflow" customModuleProvider="target">
+                                    <rect key="frame" x="15" y="59.5" width="22.5" height="17.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="customFontAdapter">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="customTextColorAdapter">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HF-Y0-mls" customClass="CustomLabel" customModule="Studyflow" customModuleProvider="target">
+                                    <rect key="frame" x="15" y="5" width="18" height="27"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="customFontAdapter">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="customTextColorAdapter">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="aqN-aA-1SV" secondAttribute="bottom" constant="5" id="6ih-4T-bgc"/>
+                                <constraint firstAttribute="height" constant="82" id="8xQ-N3-PRp"/>
+                                <constraint firstItem="aqN-aA-1SV" firstAttribute="top" secondItem="pw0-OP-jN0" secondAttribute="top" constant="5" id="AJ0-P4-rPF"/>
+                                <constraint firstAttribute="bottom" secondItem="ZqU-sf-k5L" secondAttribute="bottom" constant="5" id="LKW-Oj-OAk"/>
+                                <constraint firstItem="ZqU-sf-k5L" firstAttribute="leading" secondItem="pw0-OP-jN0" secondAttribute="leading" constant="15" id="e5v-Hp-y8L"/>
+                                <constraint firstItem="7HF-Y0-mls" firstAttribute="leading" secondItem="ZqU-sf-k5L" secondAttribute="leading" id="ere-B5-1zR"/>
+                                <constraint firstAttribute="trailing" secondItem="aqN-aA-1SV" secondAttribute="trailing" constant="5" id="jjC-is-w2e"/>
+                                <constraint firstItem="7HF-Y0-mls" firstAttribute="top" secondItem="pw0-OP-jN0" secondAttribute="top" constant="5" id="sQi-7c-XhN"/>
+                                <constraint firstItem="aqN-aA-1SV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="pw0-OP-jN0" secondAttribute="leading" constant="15" id="uKL-Mc-YnW"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="m0Z-vf-Kbl" userLabel="ExpressionLabelContainer">
+                            <rect key="frame" x="0.0" y="82" width="375" height="50"/>
+                            <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" placeholder="YES" id="JTf-2A-Yt9"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" verticalCompressionResistancePriority="250" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="DVs-ak-ry0">
+                            <rect key="frame" x="0.0" y="132" width="375" height="480"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="fUI-Bd-6CS" userLabel="First Stack View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="RbX-ZR-cE4" userLabel="Extra First Stack View ">
+                                            <rect key="frame" x="0.0" y="0.0" width="226.5" height="93.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMc-yT-0rD" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="37" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="("/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yty-1E-HBv" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="38" y="0.0" width="37" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title=")"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b4-Q4-F8S" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="76" y="0.0" width="37" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.42087310709999998" blue="0.049145418900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="mc"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56f-S5-r7c" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="114" y="0.0" width="36.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.42087310709999998" blue="0.049145418900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="m+"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oed-BN-Q2h" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="151.5" y="0.0" width="37" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.42087310709999998" blue="0.049145418900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="m-"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hS4-yY-bkC" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="189.5" y="0.0" width="37" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.42087310709999998" blue="0.049145418900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="mr"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="gg8-Z4-vxx" userLabel="Base First Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJp-Nc-3jb" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="1" green="0.42087310709999998" blue="0.049145418900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="c"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tnr-qy-eHl" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="94" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="1" green="0.42087310709999998" blue="0.049145418900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="+/-"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWl-lL-faj" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="188" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="1" green="0.42087310709999998" blue="0.049145418900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="%"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eC-kz-SXw" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="282" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="1" green="0.42087310709999998" blue="0.049145418900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="/"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="RbX-ZR-cE4"/>
+                                        </mask>
+                                    </variation>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="7mj-fD-6Db" userLabel="Second Stack View">
+                                    <rect key="frame" x="0.0" y="96" width="375" height="95.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="dPc-TB-oRK" userLabel="Extra Second Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="93.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pau-5E-w0Z" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="2nd"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cuc-qe-gQZ" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="38.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="x^2"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JX-yE-VI4" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="77" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81496601459999995" green="0.30819637080000001" blue="0.015237250549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="x^3"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffz-ky-f5R" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="115.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81496601459999995" green="0.30819637080000001" blue="0.015237250549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="x^y"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEW-OJ-LA7" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="154" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81496601459999995" green="0.30819637080000001" blue="0.015237250549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="e^x"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWC-cu-ScC" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="192.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81496601459999995" green="0.30819637080000001" blue="0.015237250549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="10^x"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="MbW-e1-pAC" userLabel="Base Second Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syf-tU-jtp" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.81496601459999995" green="0.30819637080000001" blue="0.015237250549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="7"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRR-nd-Eid" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="94" y="0.0" width="93" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.81496601459999995" green="0.30819637080000001" blue="0.015237250549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="8"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppR-xN-t5O" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="188" y="0.0" width="93" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.81496601459999995" green="0.30819637080000001" blue="0.015237250549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="9"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVi-Kc-a3U" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="282" y="0.0" width="93" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.81496601459999995" green="0.30819637080000001" blue="0.015237250549999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="*"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="dPc-TB-oRK"/>
+                                        </mask>
+                                    </variation>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="zgC-cq-tcE" userLabel="Third Stack View">
+                                    <rect key="frame" x="0.0" y="192.5" width="375" height="95"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="jlK-u0-VS7" userLabel="Extra Third Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="93"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wy-Ap-QZE" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="37.5" height="93"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="1/x"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDk-fE-hHC" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="38.5" y="0.0" width="37.5" height="93"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="2√x"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="smN-2y-9mF" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="77" y="0.0" width="37.5" height="93"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="3 √x"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBx-NN-QcK" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="115.5" y="0.0" width="37.5" height="93"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="y √x"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4sa-DL-tOt" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="154" y="0.0" width="37.5" height="93"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="ln"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7R2-xG-Mgb" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="192.5" y="0.0" width="37.5" height="93"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="log10"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-m1-MJw" userLabel="Base Third Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Cm-5X-cNA" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="4"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS4-j7-gOQ" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="94" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="5"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbh-VT-W71" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="188" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="6"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u39-6P-qEU" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="282" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="-"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="jlK-u0-VS7"/>
+                                        </mask>
+                                    </variation>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fv3-ah-Klx" userLabel="Fourth Stack View">
+                                    <rect key="frame" x="0.0" y="288.5" width="375" height="95.5"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hqE-bi-xed" userLabel="Extra Fourth Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="93.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5f-ed-uPT" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.57926520920000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="x!"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlz-U1-JYS" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="38.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="sin"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgW-Ct-74u" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="77" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="cos"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LbN-v5-t0n" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="115.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="tan"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySf-i7-DyW" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="154" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="e"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-KQ-OIV" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="192.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="EE"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="E1k-6a-0M3" userLabel="Base Fourth Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ONf-F8-ce0" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="93" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="1"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J5C-Zl-Mcb" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="94" y="0.0" width="93" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="2"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pL-Su-F8R" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="188" y="0.0" width="93" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="3"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLh-pD-773" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="282" y="0.0" width="93" height="95.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="+"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="hqE-bi-xed"/>
+                                        </mask>
+                                    </variation>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2nU-RV-tu6" userLabel="Fifth Stack View">
+                                    <rect key="frame" x="0.0" y="385" width="375" height="95"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jo3-PQ-n3G" userLabel="Extra Fifth Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="93.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bF-Ol-ZF6" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="Rad"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnK-ur-j2V" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="38.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="sinh"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebf-tU-CZY" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="77" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="cosh"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBa-Ai-kzs" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="115.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="0.81618100400000004" green="0.30805930500000001" blue="0.015263644979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="tanh"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHq-fb-h1w" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="154" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="π"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S75-9W-Jiq" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="192.5" y="0.0" width="37.5" height="93.5"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="Rand"/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="7ho-iH-SmJ" userLabel="Base Fifth Stack View">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52Q-Ze-WmT" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="187" height="95"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="0"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H30-V5-0CF" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="188" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="."/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38S-4M-jtV" customClass="CustomCalcButton" customModule="Studyflow" customModuleProvider="target">
+                                                    <rect key="frame" x="282" y="0.0" width="93" height="95"/>
+                                                    <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="="/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="Jo3-PQ-n3G"/>
+                                        </mask>
+                                    </variation>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="7ho-iH-SmJ" firstAttribute="width" secondItem="E1k-6a-0M3" secondAttribute="width" id="1F7-yN-AtJ"/>
+                                <constraint firstItem="IuZ-m1-MJw" firstAttribute="width" secondItem="MbW-e1-pAC" secondAttribute="width" id="Fup-kI-fv8"/>
+                                <constraint firstItem="H30-V5-0CF" firstAttribute="width" secondItem="8pL-Su-F8R" secondAttribute="width" id="JEA-Jg-fxK"/>
+                                <constraint firstItem="E1k-6a-0M3" firstAttribute="width" secondItem="IuZ-m1-MJw" secondAttribute="width" id="VrH-Xw-bm2"/>
+                                <constraint firstItem="52Q-Ze-WmT" firstAttribute="leading" secondItem="ONf-F8-ce0" secondAttribute="leading" id="WEy-b2-0Vf"/>
+                                <constraint firstItem="MbW-e1-pAC" firstAttribute="width" secondItem="gg8-Z4-vxx" secondAttribute="width" id="cVD-qd-fWa"/>
+                                <constraint firstItem="52Q-Ze-WmT" firstAttribute="trailing" secondItem="J5C-Zl-Mcb" secondAttribute="trailing" id="ikX-3E-fOe"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.12549019607843137" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="pw0-OP-jN0" firstAttribute="leading" secondItem="HG8-nB-qzi" secondAttribute="leading" id="39p-Y8-t2c"/>
+                        <constraint firstAttribute="trailing" secondItem="DVs-ak-ry0" secondAttribute="trailing" id="4Ne-rb-yPx"/>
+                        <constraint firstAttribute="trailing" secondItem="m0Z-vf-Kbl" secondAttribute="trailing" id="Fw9-aL-skv"/>
+                        <constraint firstItem="m0Z-vf-Kbl" firstAttribute="leading" secondItem="HG8-nB-qzi" secondAttribute="leading" id="I6w-aK-kBP"/>
+                        <constraint firstItem="DVs-ak-ry0" firstAttribute="leading" secondItem="HG8-nB-qzi" secondAttribute="leading" id="LPt-Or-0vU"/>
+                        <constraint firstItem="pw0-OP-jN0" firstAttribute="top" secondItem="HG8-nB-qzi" secondAttribute="top" id="abW-fv-QKk"/>
+                        <constraint firstAttribute="trailing" secondItem="pw0-OP-jN0" secondAttribute="trailing" id="hsg-oR-Sjb"/>
+                        <constraint firstItem="m0Z-vf-Kbl" firstAttribute="top" secondItem="pw0-OP-jN0" secondAttribute="bottom" id="rel-pK-pX1"/>
+                        <constraint firstAttribute="bottom" secondItem="DVs-ak-ry0" secondAttribute="bottom" id="wRZ-vi-POa"/>
+                        <constraint firstItem="DVs-ak-ry0" firstAttribute="top" secondItem="m0Z-vf-Kbl" secondAttribute="bottom" id="zzc-jf-98R"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.80784313725490198" green="0.92549019607843142" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HG8-nB-qzi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0qi-Fw-FKg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HG8-nB-qzi" secondAttribute="trailing" id="8gz-2q-fc9"/>
+                <constraint firstItem="HG8-nB-qzi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="35" id="j23-rW-Hla"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="HG8-nB-qzi" secondAttribute="bottom" id="wi7-xt-Rma"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
